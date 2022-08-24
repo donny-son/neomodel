@@ -554,7 +554,7 @@ class JSONProperty(Property):
 
     @validator
     def deflate(self, value):
-        return json.dumps(value)
+        return json.dumps(value, ensure_ascii=False)
 
 
 class AliasProperty(property, Property):
